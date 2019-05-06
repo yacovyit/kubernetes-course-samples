@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name:  my-deployment
+  labels:
+    name:  my-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name:  my-deployment
+    spec:
+      containers:
+      - image:  yehiyam/webapp:v1
+        name:  app
+        ports:
+        - containerPort:  8080
+        

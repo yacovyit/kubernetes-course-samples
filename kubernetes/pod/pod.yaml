@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp
+spec:
+  containers:
+  - name: myapp
+    image: gcr.io/google-samples/kubernetes-bootcamp:v1
+    ports:
+    - containerPort: 8080
